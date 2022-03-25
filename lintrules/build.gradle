@@ -1,0 +1,9 @@
+plugins {
+    id 'kotlin'
+}
+
+dependencies {
+    compileOnly 'com.pinterest.ktlint:ktlint-core:0.44.0'
+    testImplementation 'com.pinterest.ktlint:ktlint-core:0.44.0'
+    testImplementation 'com.pinterest.ktlint:ktlint-test:0.44.0'
+}
