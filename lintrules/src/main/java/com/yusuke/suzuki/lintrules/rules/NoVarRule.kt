@@ -12,6 +12,7 @@ class NoVarRule : Rule("no-var") {
     ) {
         // Java.io.Serializableを継承したクラスのプロパティは、
         // Serializableを継承しているか, プリミティブ型
+        // テスト
         if (node.elementType == ElementType.VAR_KEYWORD) {
             emit(node.startOffset, "😱 Unexpected var, use val instead 🏄‍", false)
         }

@@ -1,0 +1,19 @@
+name: Android CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'lintrules/src/main/java/com/yusuke/suzuki/lintrules/**.kt'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish custom ktlint rules
+        env:
+          USERNAME: YusukeSuzuki1213
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew build publish
